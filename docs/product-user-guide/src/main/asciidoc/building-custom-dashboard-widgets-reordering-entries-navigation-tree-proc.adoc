@@ -1,0 +1,36 @@
+[id='building-custom-dashboard-widgets-reordering-entries-navigation-tree-proc']
+= Reordering a navigation tree
+
+You can reorder the navigation trees of the *Navigation* tab. You can also reorder the entries of a navigation tree to as per your needs.
+
+[NOTE]
+====
+Reordering options of tree entries will vary as per their position in the tree hierarchy.
+====
+
+[float]
+== Reordering navigation trees
+.Procedure
+. Go to *Menu* -> *Design* -> *Pages*.
+. Click the *Navigation* tab and then select the navigation tree you want to reorder.
+. Click the gear icon of the tree and then click *Move first*, *Move up*, *Move Down*, or *Move last* as needed.
++
+[NOTE]
+=======
+First and last entries of a navigation tree will have only two reordering options available as per the case.
+=======
++
+. Click *Save*.
+
+[float]
+== Reordering the entries of a navigation tree
+.Procedure
+. Go to *Menu* -> *Design* -> *Pages*.
+. Click the *Navigation* tab and then expand the navigation tree.
+. Click the gear icon of the entry you want to reorder and then click *Move first*, *Move up*, *Move Down*, or *Move last* as needed.
++
+[NOTE]
+=======
+Page entries have an additional *Goto Page* option which will display the selected page in the *Page Editor*.
+=======
+. Click *Save*.
