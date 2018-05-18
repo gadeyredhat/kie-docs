@@ -1,0 +1,9 @@
+[id='building-custom-dashboard-widgets-deleting-navigation-tree-proc']
+= Deleting a navigation tree
+
+You can use the *Page Editor* to delete any navigation tree except the *Workbench* tree.
+
+.Procedure
+. Go to *Menu* -> *Design* -> *Pages*.
+. In the *Navigation* tab, select the navigation tree that you want to delete, then click the delete icon.
+. Click *Save*.
