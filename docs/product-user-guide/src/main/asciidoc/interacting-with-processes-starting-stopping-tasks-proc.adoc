@@ -1,0 +1,27 @@
+[id='interacting-with-processes-starting-stopping-tasks-proc']
+= Starting and stopping tasks
+
+You can start and stop user tasks from the *Tasks* page.
+
+[NOTE]
+====
+Ensure that you are logged in and have appropriate permissions for starting and stopping tasks.
+====
+
+[float]
+== Starting a task
+
+.Procedure
+. Go to *Menu* -> *Track* -> *Task Inbox*.
+. On the *Task Inbox* page, click on the task to open it.
+. On the *Work* tab of the task page, click *Start*. Once you start a task, its status changes to *InProgress*.
+
+ You can view the status of tasks on the *Task Inbox* as well as on the *Manage Tasks* page. Note that only users with admin and process admin role can access the *Manage Tasks* page.
+
+[float]
+== Stopping a task
+
+.Procedure
+. Go to *Menu* -> *Track* -> *Task Inbox*.
+. On the *Task Inbox* page, click on the task to open it.
+. On the *Work* tab of the task page, click *Complete*.
