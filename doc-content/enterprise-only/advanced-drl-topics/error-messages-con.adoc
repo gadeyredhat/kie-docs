@@ -1,0 +1,4 @@
+[id='error-messages-con']
+= Error Messages
+
+{PRODUCT} has standardized error messages. This will help you in identifying and interpreting the error messages in a easier and faster way. The error messages also provides tips at times on how to solve the problems associated with them.

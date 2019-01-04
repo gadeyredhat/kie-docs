@@ -49,6 +49,26 @@ include::{shared-dir}/KIE/BuildDeployUtilizeAndRun/executable-model-maven-proc.a
 
 include::{shared-dir}/KIE/BuildDeployUtilizeAndRun/executable-model-java-proc.adoc[leveloffset=+3]
 
+//Advanced DRL concepts/topics
+
+include::{enterprise-dir}/advanced-drl-topics/error-messages-con.adoc[leveloffset=+1]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-format-con.adoc[leveloffset=+2]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-descriptions-con.adoc[leveloffset=+2]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-101-con.adoc[leveloffset=+3]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-102-con.adoc[leveloffset=+3]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-103-con.adoc[leveloffset=+3]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-104-con.adoc[leveloffset=+3]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-105-con.adoc[leveloffset=+3]
+
+include::{enterprise-dir}/advanced-drl-topics/error-message-other-con.adoc[leveloffset=+3]
+
 == Next steps
 * {URL_TESTING_DECISION_SERVICE}[_{TESTING_DECISION_SERVICE}_]
 * {URL_PACKAGING_DEPLOYING_PROJECT}[_{PACKAGING_DEPLOYING_PROJECT}_]

@@ -1,0 +1,19 @@
+[id='error-message-format-con']
+= Error message format
+
+{PRODUCT} displays the error messages in a standard format which makes it easier to identify or interpret the error message.
+
+An error message consists of message blocks. It can have a total of five blocks, with three being mandatory and two being optional. To better understand this format, refer to the following example:
+
+.Error Message Format
+image::LanguageReference/error_message.png[align="left"]
+
+* *1st Block*: This block identifies the numeric error code.
+
+* *2nd Block*: This block identifies the line and column information.
+
+* *3rd Block*: This block describes the error.
+
+* *4th Block*: This block is the first context which identifies the rule, function, template or query where the error occurs. This is an optional block.
+
+* *5th Block*: This block identifies the pattern where the error occurs. This is also an optional block.
