@@ -40,6 +40,7 @@ endif::[]
 .Procedure
 . Determine the base URL for accessing the {KIE_SERVER} REST API endpoints. This requires knowing the following values (with the default local deployment values as an example):
 +
+ifeval::["{context}" == "dmn-models"]
 --
 * Host (`localhost`)
 * Port (`8080`)
@@ -50,6 +51,19 @@ Example base URL in local deployment:
 
 `\http://localhost:8080/kie-server/services/rest/`
 --
+endif::[]
+ifeval::["{context}" == "decision-service-getting-started"]
+--
+* Host (`localhost`)
+* Port (`8080`)
+* Root context (`kie-server`)
+* Base REST path (`services/rest/`)
+
+Example base URL in local deployment for the traffic violations project:
+
+`\http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0`
+--
+endif::[]
 . Determine user authentication requirements.
 +
 When users are defined directly in the {KIE_SERVER} configuration, HTTP Basic authentication is used and requires the user name and password. Successful requests require that the user have the `kie-server` role.
@@ -89,6 +103,7 @@ curl -H "accept: application/xml" -H "content-type: application/xml"
 
 Example curl request:
 
+ifeval::["{context}" == "dmn-models"]
 [source]
 ----
 curl -u krisv:krisv -H "accept: application/xml" -X GET "http://localhost:8080/kie-server/services/rest/server/containers/MovieDMNContainer/dmn"
@@ -139,8 +154,120 @@ Sample JSON output:
 }
 ----
 --
+endif::[]
+ifeval::["{context}" == "decision-service-getting-started"]
+[source]
+----
+curl -u wbadmin:wbadmin -H "accept: application/xml" -X GET "http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0"
+----
+
+Sample XML output:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response type="SUCCESS" msg="Info for container Traffic-Violation_1.0.0">
+    <kie-container container-alias="Traffic-Violation" container-id="Traffic-Violation_1.0.0" status="STARTED">
+        <config-items>
+            <itemName>KBase</itemName>
+            <itemValue></itemValue>
+            <itemType>BPM</itemType>
+        </config-items>
+        <config-items>
+            <itemName>KSession</itemName>
+            <itemValue></itemValue>
+            <itemType>BPM</itemType>
+        </config-items>
+        <config-items>
+            <itemName>MergeMode</itemName>
+            <itemValue>MERGE_COLLECTIONS</itemValue>
+            <itemType>BPM</itemType>
+        </config-items>
+        <config-items>
+            <itemName>RuntimeStrategy</itemName>
+            <itemValue>SINGLETON</itemValue>
+            <itemType>BPM</itemType>
+        </config-items>
+        <messages>
+            <content>Container Traffic-Violation_1.0.0 successfully created with module org.kie.example.traffic:Traffic-Violation:1.0.0.</content>
+            <severity>INFO</severity>
+            <timestamp>2019-02-20T14:24:23.615+05:30</timestamp>
+        </messages>
+        <release-id>
+            <artifact-id>Traffic-Violation</artifact-id>
+            <group-id>org.kie.example.traffic</group-id>
+            <version>1.0.0</version>
+        </release-id>
+        <resolved-release-id>
+            <artifact-id>Traffic-Violation</artifact-id>
+            <group-id>org.kie.example.traffic</group-id>
+            <version>1.0.0</version>
+        </resolved-release-id>
+        <scanner status="DISPOSED"/>
+    </kie-container>
+</response>
+----
+
+Sample JSON output:
+
+[source,json]
+----
+{
+  "type" : "SUCCESS",
+  "msg" : "Info for container Traffic-Violation_1.0.0",
+  "result" : {
+    "kie-container" : {
+      "container-id" : "Traffic-Violation_1.0.0",
+      "release-id" : {
+        "group-id" : "org.kie.example.traffic",
+        "artifact-id" : "Traffic-Violation",
+        "version" : "1.0.0"
+      },
+      "resolved-release-id" : {
+        "group-id" : "org.kie.example.traffic",
+        "artifact-id" : "Traffic-Violation",
+        "version" : "1.0.0"
+      },
+      "status" : "STARTED",
+      "scanner" : {
+        "status" : "DISPOSED",
+        "poll-interval" : null
+      },
+      "config-items" : [ {
+        "itemName" : "KBase",
+        "itemValue" : "",
+        "itemType" : "BPM"
+      }, {
+        "itemName" : "KSession",
+        "itemValue" : "",
+        "itemType" : "BPM"
+      }, {
+        "itemName" : "MergeMode",
+        "itemValue" : "MERGE_COLLECTIONS",
+        "itemType" : "BPM"
+      }, {
+        "itemName" : "RuntimeStrategy",
+        "itemValue" : "SINGLETON",
+        "itemType" : "BPM"
+      } ],
+      "messages" : [ {
+        "severity" : "INFO",
+        "timestamp" : {
+  "java.util.Date" : 1550652863615
+},
+        "content" : [ "Container Traffic-Violation_1.0.0 successfully created with module org.kie.example.traffic:Traffic-Violation:1.0.0." ]
+      } ],
+      "container-alias" : "Traffic-Violation"
+    }
+  }
+}
+----
+--
+endif::[]
+
 . Execute the model:
 +
+ifeval::["{context}" == "dmn-models"]
 --
 *[POST]* `server/containers/{containerId}/dmn`
 
@@ -149,6 +276,123 @@ Example curl request:
 [source]
 ----
 curl -u krisv:krisv -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/MovieDMNContainer/dmn" -d "{ \"model-namespace\" : \"http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a\", \"model-name\" : \"dmn-movieticket-ageclassification\", \"decision-name\" : [ ], \"decision-id\" : [ ], \"dmn-context\" : {\"Age\" : 66}}"
+----
+
+Example JSON request:
+
+[source,json]
+----
+{
+  "model-namespace" : "http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a",
+  "model-name" : "dmn-movieticket-ageclassification",
+  "decision-name" : [ ],
+  "decision-id" : [ ],
+  "dmn-context" : {"Age" : 66}
+}
+----
+
+Example XML request (JAXB format):
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn-evaluation-context>
+    <model-namespace>http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a</model-namespace>
+    <model-name>dmn-movieticket-ageclassification</model-name>
+    <dmn-context xsi:type="jaxbListWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <type>MAP</type>
+        <element xsi:type="jaxbStringObjectPair" key="Age">
+            <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">66</value>
+        </element>
+    </dmn-context>
+</dmn-evaluation-context>
+----
+
+[NOTE]
+====
+Regardless of the request format, the request requires the following elements:
+
+* Model namespace
+* Model name
+* Context object containing input values
+====
+
+Example JSON response:
+
+[source,json]
+----
+{
+  "type" : "SUCCESS",
+  "msg" : "OK from container 'MovieDMNContainer'",
+  "result" : {
+    "dmn-evaluation-result" : {
+      "messages" : [ ],
+      "model-namespace" : "http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a",
+      "model-name" : "dmn-movieticket-ageclassification",
+      "decision-name" : [ ],
+      "dmn-context" : {
+        "Age" : 66,
+        "AgeClassification" : "Senior"
+      },
+      "decision-results" : {
+        "_3" : {
+          "messages" : [ ],
+          "decision-id" : "_3",
+          "decision-name" : "AgeClassification",
+          "result" : "Senior",
+          "status" : "SUCCEEDED"
+        }
+      }
+    }
+  }
+}
+----
+
+Example XML (JAXB format) response:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response type="SUCCESS" msg="OK from container 'MovieDMNContainer'">
+      <dmn-evaluation-result>
+            <model-namespace>http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a</model-namespace>
+            <model-name>dmn-movieticket-ageclassification</model-name>
+            <dmn-context xsi:type="jaxbListWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <type>MAP</type>
+                  <element xsi:type="jaxbStringObjectPair" key="Age">
+                        <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">66</value>
+                  </element>
+                  <element xsi:type="jaxbStringObjectPair" key="AgeClassification">
+                        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">Senior</value>
+                  </element>
+            </dmn-context>
+            <messages/>
+            <decisionResults>
+                  <entry>
+                        <key>_3</key>
+                        <value>
+                              <decision-id>_3</decision-id>
+                              <decision-name>AgeClassification</decision-name>
+                              <result xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Senior</result>
+                              <messages/>
+                              <status>SUCCEEDED</status>
+                        </value>
+                  </entry>
+            </decisionResults>
+      </dmn-evaluation-result>
+</response>
+----
+--
+endif::[]
+ifeval::["{context}" == "decision-service-getting-started"]
+--
+*[POST]* `server/containers/{containerId}/dmn`
+
+Example curl request:
+
+[source]
+----
+curl -u wbadmin:wbadmin -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/MovieDMNContainer/dmn" -d "{ \"model-namespace\" : \"http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a\", \"model-name\" : \"dmn-movieticket-ageclassification\", \"decision-name\" : [ ], \"decision-id\" : [ ], \"dmn-context\" : {\"Age\" : 66}}"
 ----
 
 Example JSON request:
