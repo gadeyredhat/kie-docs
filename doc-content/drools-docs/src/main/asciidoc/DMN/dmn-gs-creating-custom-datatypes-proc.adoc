@@ -49,7 +49,7 @@ The following tables show the `Violation`, `Driver`, and the `Fine` custom data 
 |Points |number
 |===
 
-.Prerequisites
+.Prerequisite
 * You have created the traffic-violations DMN decision requirements diagrams (DRDs) in {CENTRAL}.
 
 .Procedure
@@ -83,7 +83,7 @@ image::dmn/dmn-tDriver-custom-datatype.png[]
 ... Click *Add* to add a new constraint.
 ... Enter `"parking"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
 ... Click *Add* to add another constraint.
-... ... Enter `"Driving under influence?"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
+... Enter `"Driving under influence?"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
 ... Click *OK*.
 .. Click the settings icon next to the *Type* field and select *Insert field below*.
 .. Enter `Speed Limit` in the *Name* field and select `integer` as the *Type*. Click *Save*.

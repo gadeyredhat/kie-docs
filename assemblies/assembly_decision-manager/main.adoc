@@ -22,7 +22,7 @@ This document focuses on how to create and test a new project in {CENTRAL} for a
 
 // Modules - concepts, procedures, refs, etc.
 
-include::{drools-dir}/DMN/dmn-new-project-creating-proc.adoc[leveloffset=+1]
+include::{drools-dir}/DMN/dmn-gs-new-project-creating-proc.adoc[leveloffset=+1]
 
 include::{drools-dir}/DMN/dmn-con.adoc[leveloffset=+1]
 include::{drools-dir}/DMN/dmn-gs-creating-drd-proc.adoc[leveloffset=+2]
@@ -31,13 +31,13 @@ include::{drools-dir}/DMN/dmn-gs-assigning-custom-datatypes-proc.adoc[leveloffse
 include::{drools-dir}/DMN/dmn-gs-defining-decision-logic-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/project-data/test-scenarios-con.adoc[leveloffset=+1]
-include::{drools-dir}/DMN/dmn-gs-testing-test-scenario-proc.adoc[leveloffset=+1]
+include::{drools-dir}/DMN/dmn-gs-testing-test-scenario-proc.adoc[leveloffset=+2]
 
-include::{drools-dir}/DMN/DMN-execution-con.adoc[leveloffset=+1]
-include::{drools-dir}/DMN/DMN-execution-rest-proc.adoc[leveloffset=+2]
+include::{drools-dir}/DMN/dmn-execution-con.adoc[leveloffset=+1]
+include::{drools-dir}/DMN/dmn-execution-rest-proc.adoc[leveloffset=+2]
 
-include::{drools-dir}/Examples/decisions-examples-central-con.adoc[leveloffset=+1]
-include::{drools-dir}/Examples/decisions-examples-central-proc.adoc[leveloffset=+2]
+include::{drools-dir}/Examples/decision-examples-central-con.adoc[leveloffset=+1]
+include::{drools-dir}/Examples/decision-examples-central-proc.adoc[leveloffset=+2]
 
 // Versioning info
 include::_artifacts/versioning-information.adoc[]

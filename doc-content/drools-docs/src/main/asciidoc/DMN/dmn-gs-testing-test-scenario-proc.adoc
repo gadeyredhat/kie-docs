@@ -57,7 +57,7 @@ You will use the Test Scenarios editor in {CENTRAL} to test the DMN decision req
 * *Amount*: `1000`
 * *Should the driver be suspended?*: `"No"`
 . Right-click the fourth row and select *Insert row below* to add another row.
-. Enter the following information in the first row of the test scenarios:
+. Enter the following information in the fifth row of the test scenarios:
 * *Scenario description*: `Driver suspended`
 * *Points* (under *Given* column header): `15`
 * *Type*: `"speed"`
