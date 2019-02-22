@@ -558,7 +558,6 @@ ifeval::["{context}" == "dmn-models"]
 +
 Example curl request:
 
-
 [source]
 ----
 curl -u krisv:krisv -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/MovieDMNContainer/dmn" -d "{ \"model-namespace\" : \"http://www.redhat.com/_c7328033-c355-43cd-b616-0aceef80e52a\", \"model-name\" : \"dmn-movieticket-ageclassification\", \"decision-name\" : [ ], \"decision-id\" : [ ], \"dmn-context\" : {\"Age\" : 66}}"
@@ -678,7 +677,7 @@ Example curl request:
 
 [source]
 ----
-curl -u wbadmin:wbadmin -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0/dmn" -d "{ \"model-namespace\" : \"https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8\", \"model-name\" : \"Traffic Violation\", \"decision-name\" : \"Fine\", \"decision-id\" : \"_23428EE8-DC8B-4067-8E67-9D7C53EC975F\", \"dmn-context\" : []}"
+curl -u wbadmin:wbadmin -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0/dmn" -d "{ \"model-namespace\" : \"https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8\", \"model-name\" : "Traffic Violation", \"decision-name\" : [ ], \"decision-id\" : [ ], \"dmn-context\" : {"Driver" : {"Points" : 15}, "Violation" : {"Type" : "speed", "Actual Speed" : 135, "Speed Limit" : 100}}"
 ----
 
 Example JSON request:
@@ -690,7 +689,19 @@ Example JSON request:
   "model-name" : "Traffic Violation",
   "decision-name" : [ ],
   "decision-id" : [ ],
-  "dmn-context" : {"Age" : 66}
+  "dmn-context" :
+  {
+    "Driver" :
+    {
+  	   "Points" : 15
+    },
+  	"Violation" :
+    {
+  		"Type" : "speed",
+  		"Actual Speed" : 135,
+  		"Speed Limit" : 100
+  	}
+  }
 }
 ----
 
@@ -704,8 +715,8 @@ Example XML request (JAXB format):
     <model-name>Traffic Violation</model-name>
     <dmn-context xsi:type="jaxbListWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <type>MAP</type>
-        <element xsi:type="jaxbStringObjectPair" key="Age">
-            <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">66</value>
+        <element xsi:type="jaxbStringObjectPair" key="Points">
+            <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">15</value>
         </element>
     </dmn-context>
 </dmn-evaluation-context>
@@ -725,25 +736,46 @@ Example JSON response:
 [source,json]
 ----
 {
-  "type" : "SUCCESS",
-  "msg" : "OK from container 'MovieDMNContainer'",
-  "result" : {
-    "dmn-evaluation-result" : {
-      "messages" : [ ],
-      "model-namespace" : "https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8",
-      "model-name" : "Traffic Violation",
-      "decision-name" : [ ],
-      "dmn-context" : {
-        "Age" : 66,
-        "AgeClassification" : "Senior"
-      },
-      "decision-results" : {
-        "_3" : {
-          "messages" : [ ],
-          "decision-id" : "_3",
-          "decision-name" : "AgeClassification",
-          "result" : "Senior",
-          "status" : "SUCCEEDED"
+  "type": "SUCCESS",
+  "msg": "OK from container 'Traffic-Violation_1.0.0'",
+  "result": {
+      "dmn-evaluation-result": {
+          "messages": [],
+          "model-namespace": "https://github.com/kiegroup/drools/kie-dmn/_7D8116DE-ADF5-4560-A116-FE1A2EAFFF48",
+          "model-name": "Traffic Violation",
+          "decision-name": [],
+          "dmn-context": {
+              "Violation": {
+                "Type": "speed",
+                "Speed Limit": 100,
+                "Actual Speed": 135
+              },
+              "Should Driver be Suspended?": "YES",
+                "Driver": {
+                  "Points": 15
+                },
+                "Fine": {
+                  "Points": 7,
+                  "Amount": 1000
+                }
+            },
+      "decision-results": {
+          "_E1AF5AC2-E259-455C-96E4-596E30D3BC86": {
+              "messages": [],
+              "decision-id": "_E1AF5AC2-E259-455C-96E4-596E30D3BC86",
+              "decision-name": "Should the Driver be Suspended?",
+              "result": "YES",
+              "status": "SUCCEEDED"
+            },
+          "_D7F02CE0-AF50-4505-AB80-C7D6DE257920": {
+              "messages": [],
+              "decision-id": "_D7F02CE0-AF50-4505-AB80-C7D6DE257920",
+              "decision-name": "Fine",
+              "result": {
+                "Points": 7,
+                "Amount": 1000
+              },
+          "status": "SUCCEEDED"
         }
       }
     }
@@ -756,17 +788,17 @@ Example XML (JAXB format) response:
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<response type="SUCCESS" msg="OK from container 'MovieDMNContainer'">
+<response type="SUCCESS" msg="OK from container 'Traffic-Violation_1.0.0'">
       <dmn-evaluation-result>
             <model-namespace>https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8</model-namespace>
             <model-name>Traffic Violation</model-name>
             <dmn-context xsi:type="jaxbListWrapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <type>MAP</type>
-                  <element xsi:type="jaxbStringObjectPair" key="Age">
-                        <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">66</value>
+                  <element xsi:type="jaxbStringObjectPair" key="Violation">
+                        <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema">Speed</value>
                   </element>
-                  <element xsi:type="jaxbStringObjectPair" key="AgeClassification">
-                        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">Senior</value>
+                  <element xsi:type="jaxbStringObjectPair" key="Points">
+                        <value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema">15</value>
                   </element>
             </dmn-context>
             <messages/>
@@ -775,8 +807,8 @@ Example XML (JAXB format) response:
                         <key>_3</key>
                         <value>
                               <decision-id>_3</decision-id>
-                              <decision-name>AgeClassification</decision-name>
-                              <result xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Senior</result>
+                              <decision-name>Should the driver be suspended?</decision-name>
+                              <result xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Yes</result>
                               <messages/>
                               <status>SUCCEEDED</status>
                         </value>
