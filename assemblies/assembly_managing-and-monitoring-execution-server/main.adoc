@@ -27,8 +27,13 @@ include::{enterprise-dir}/project-data/project-duplicate-GAV-con.adoc[leveloffse
 include::{enterprise-dir}/project-data/project-duplicate-GAV-manage-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/installation/patches-applying-proc.adoc[leveloffset=+1]
+
 include::{enterprise-dir}/migration/migration-configure-kie-server-proc.adoc[leveloffset=+1]
+
+ifdef::PAM[]
 include::{enterprise-dir}/installation/eap-data-source-add-proc.adoc[leveloffset=+1]
+endif::PAM[]
+
 include::{enterprise-dir}/installation/eap-execution-server-configure-proc.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/installation/controller-con.adoc[leveloffset=+1]
@@ -47,16 +52,18 @@ include::{enterprise-dir}/admin-and-config/kie-server-configure-server-managed-b
 include::{enterprise-dir}/admin-and-config/kie-server-smart-router-enable-tsl-support-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/admin-and-config/kie-server-managed-kie-server-con.adoc[leveloffset=+1]
+
 include::{enterprise-dir}/admin-and-config/kie-server-unmanaged-server-config-proc.adoc[leveloffset=+1]
 
 ifdef::PAM[]
 include::{enterprise-dir}/admin-and-config/kie-server-deactivate-kie-containers-proc.adoc[leveloffset=+1]
+
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/deployment-descriptor-configuration-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-manage-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-restricting-runtime-access-proc.adoc[leveloffset=+2]
+
 include::{enterprise-dir}/admin-and-config/kie-server-accessing-runtime-data-proc.adoc[leveloffset=+1]
-endif::PAM[]
 
 include::{enterprise-dir}/admin-and-config/execution-error-management-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/manage-execution-errors-proc.adoc[leveloffset=+2]
@@ -65,9 +72,11 @@ include::{enterprise-dir}/admin-and-config/execution-error-storage-con.adoc[leve
 include::{enterprise-dir}/admin-and-config/error-types-and-filters-ref.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/autoacknowledge-execution-errors-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/error-list-cleanup-ref.adoc[leveloffset=+2]
+endif::PAM[]
 
 include::{enterprise-dir}/admin-and-config/configuring-openshift-connection-timeout-proc.adoc[leveloffset=+1]
 
+ifdef::PAM[]
 include::{enterprise-dir}/admin-and-config/persistence-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/safe-points-configuring-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/session-persistence-entities-ref.adoc[leveloffset=+2]
@@ -76,6 +85,7 @@ include::{enterprise-dir}/admin-and-config/workitem-entities-ref.adoc[leveloffse
 include::{enterprise-dir}/admin-and-config/correlationkey-entities-ref.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/contextmapping-entities-ref.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/pessimistic-locking-proc.adoc[leveloffset=+2]
+endif::PAM[]
 // include::{enterprise-dir}/admin-and-config/persistence-configuration-jbpmhelper-proc.adoc[leveloffset=+2] rmoved for 7.0. Used JBPM Helper is used for tests only and not intended for enterprise use.
 // include::{enterprise-dir}/admin-and-config/persistence-configuration-jpaknowledgeservice-proc.adoc[leveloffset=+2] removing for 7.0 as content is stale and out of time for publishing.
 
@@ -85,6 +95,7 @@ include::{enterprise-dir}/integration/sso-third-party-proc.adoc[leveloffset=+1]
 include::{enterprise-dir}/integration/sso-basic-auth-proc.adoc[leveloffset=+2]
 //include::{enterprise-dir}/admin-and-config/sso-token-auth-proc.adoc[leveloffset=+2]
 // commenting out because SSO link isn't working include::{enterprise-dir}/admin-and-config/kie-server-bootstrap-switches-ref.adoc[leveloffset=+1]
+
 include::{enterprise-dir}/installation/run-standalone-properties-con.adoc[leveloffset=+1]
 
 == Additional resources
