@@ -3,6 +3,9 @@
 
 You will use the Test Scenarios editor in {CENTRAL} to test the DMN decision requirements diagrams (DRDs) and define decision logic for the traffic violation project.
 
+.Test scenario for the traffic violation example
+image::dmn/dmn-gs-traffic-violation-test-scenarios.png[]
+
 .Prerequisite
 * You have successfully build the traffic-violations project in {CENTRAL}.
 
@@ -68,6 +71,9 @@ You will use the Test Scenarios editor in {CENTRAL} to test the DMN decision req
 * *Should the driver be suspended?*: `"Yes"`
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.
 . Click the play button to check whether the test scenarios pass or fail.
++
+.Test scenario execution result for the traffic violation example
+image::dmn/dmn-gs-test-scenarios-execution-results.png[]
 +
 In case of failure, correct the errors and run the test scenarios again.
 

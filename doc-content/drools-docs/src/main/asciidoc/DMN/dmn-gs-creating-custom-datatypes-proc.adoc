@@ -55,7 +55,10 @@ The following tables show the `Violation`, `Driver`, and the `Fine` custom data 
 .Procedure
 . From the *Data Types* tab, click *Add*.
 . First, create the *tDriver* custom data type. Enter `tDriver` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
-. Next to the *tDriver* data type, click the settings icon (the three vertical dots) and select *Insert nested field*.
++
+.The tDriver custom data type
+image::dmn/dmn-tDriver-custom-datatype.png[]
+. Next to the *tDriver* data type, click the three vertical dots and select *Insert nested field*.
 .. Enter `Name` in the *Name* field and select `string` as the *Type*. Click *Save*.
 .. Click the settings icon next to the *Name* field and select *Insert field below*.
 .. Enter `Age` in the *Name* field and select `number` as the *Type*. Click *Save*.
@@ -65,13 +68,12 @@ The following tables show the `Violation`, `Driver`, and the `Fine` custom data 
 .. Enter `City` in the *Name* field and select `string` as the *Type*. Click *Save*.
 .. Click the settings icon next to the *City* field and select *Insert field below*.
 .. Enter `Points` in the *Name* field and select `number` as the *Type*. Click *Save*.
-+
-.The tDriver custom data type
-image::dmn/dmn-tDriver-custom-datatype.png[]
-
 . Next, create the *tViolation* data type. From the *Data Types* tab, click *Add*.
++
+.The tViolation custom data type
+image::dmn/dmn-tViolation-custom-datatype.png[]
 . Enter `tViolation` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
-. Next to the *tViolation* data type, click the settings icon (the three vertical dots) and select *Insert nested field*.
+. Next to the *tViolation* data type, click the three vertical dots and select *Insert nested field*.
 .. Enter `Code` in the *Name* field and select `string` as the *Type*. Click *Save*.
 .. Click the settings icon next to the *Code* field and select *Insert field below*.
 .. Enter `Date` in the *Name* field and select `date` as the *Type*. Click *Save*.
@@ -89,18 +91,13 @@ image::dmn/dmn-tDriver-custom-datatype.png[]
 .. Enter `Speed Limit` in the *Name* field and select `integer` as the *Type*. Click *Save*.
 .. Click the settings icon next to the *Speed Limit* field and select *Insert field below*.
 .. Enter `Actual Speed` in the *Name* field and select `integer` as the *Type*. Click *Save*.
-+
-.The tViolation custom data type
-image::dmn/dmn-tViolation-custom-datatype.png[alt]
-
 . Finally, create the *tFine* data type. From the *Data Types* tab, click *Add*.
++
+.The tFine custom data type
+image::dmn/dmn-tFine-custom-datatype.png[]
 . Enter `tFine` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
-. Next to the *tFine* data type, click the settings icon (the three vertical dots) and select *Insert nested field*.
+. Next to the *tFine* data type, click the three vertical dots and select *Insert nested field*.
 .. Enter `Amount` in the *Name* field and select `number` as the *Type*. Click *Save*.
 .. Click the settings icon next to the *Amount* field and select *Insert field below*.
 .. Enter `Points` in the *Name* field and select `number` as the *Type*. Click *Save*.
-+
-.The tFine custom data type
-image::dmn/dmn-tFine-custom-datatype.png[alt]
-
 . Once all the three custom data types are created, click *Save* to open the *Confirm Save* dialog box and click *Save* again.

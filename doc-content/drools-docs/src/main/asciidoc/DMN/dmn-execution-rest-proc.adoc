@@ -673,11 +673,16 @@ ifeval::["{context}" == "decision-service-getting-started"]
 --
 *[POST]* `server/containers/{containerId}/dmn`
 
+[NOTE]
+====
+Attribute model-namespace is automatically generated and is different for every user. Ensure that the model-namespace and model-name attributes in Step 5 to match those of the model deployed and queried in Step 4.
+====
+
 Example curl request:
 
 [source]
 ----
-curl -u wbadmin:wbadmin -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0/dmn" -d "{ \"model-namespace\" : \"https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8\", \"model-name\" : "Traffic Violation", \"decision-name\" : [ ], \"decision-id\" : [ ], \"dmn-context\" : {"Driver" : {"Points" : 15}, "Violation" : {"Type" : "speed", "Actual Speed" : 135, "Speed Limit" : 100}}"
+curl -u wbadmin:wbadmin -H "accept: application/json" -H "content-type: application/json" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/Traffic-Violation_1.0.0/dmn" -d "{ \"model-namespace\" : \"https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8\", \"model-name\" : "Traffic Violation", \"dmn-context\" : {"Driver" : {"Points" : 15}, "Violation" : {"Type" : "speed", "Actual Speed" : 135, "Speed Limit" : 100}}"
 ----
 
 Example JSON request:
@@ -687,8 +692,6 @@ Example JSON request:
 {
   "model-namespace" : "https://github.com/kiegroup/drools/kie-dmn/_60B01F4D-E407-43F7-848E-258723B5FAC8",
   "model-name" : "Traffic Violation",
-  "decision-name" : [ ],
-  "decision-id" : [ ],
   "dmn-context" :
   {
     "Driver" :

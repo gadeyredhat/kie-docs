@@ -3,6 +3,9 @@
 
 To calculate the fine and to decide whether the driver is to be suspended or not, you will define the traffic violations DMN decision logic using decision table and context option.
 
+.Fine decision table
+image::dmn/dmn-gs-fine-decision-table.png[]
+
 .Prerequisite
 * You have assigned the DMN custom data types to the appropriate decision and input nodes in the traffic violations DRD in {CENTRAL}.
 
@@ -42,14 +45,12 @@ Right-click the third row and select `Insert rule below` to add another row.
 * *Violation.Actual Speed - Violation.Speed Limit*: `-`
 * *Amount*: `1000`
 * *Points*: `5`
-+
-Right-click the fourth row and select `Insert rule below` to add another row.
-+
-.Fine decision table
-image::dmn/dmn-gs-fine-decision-table.png[alt]
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.
 
 After defining the decision table for calculating fine, you need to define the context for whether the driver is to be suspended or not.
+
+.Should the driver be suspended? context
+image::dmn/dmn-gs-context-table.png[]
 
 . In the DMN designer canvas, select the *Should the driver be suspended?* decision node and click the *Edit* icon to open the DMN boxed expression designer.
 . Click to open the *Select logic type* context menu and select *Context* from it. A context table based on *Should the driver be suspended?* decision node will open.
@@ -58,9 +59,6 @@ After defining the decision table for calculating fine, you need to define the c
 .. Click the cell next to *Total Points* and select `Literal Expression` from the context menu.
 .. Enter `Driver.Points + Fine.Points` as the *Literal Expression*.
 .. In the parameter cell below *Driver.Points + Fine.Points*, enter `if Total Points >= 20 "Yes" else "No"`.
-+
-.Should the driver be suspended? context
-image::dmn/dmn-gs-context-table.png[alt]
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.
 
 You have defined how to calculate the fine and the context for deciding when to suspend the driver. You can now build your project and if it displays a *Build: SUCCESSFUL* message in the *Alerts* section, it confirms that you are correctly creating the project.

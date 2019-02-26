@@ -49,7 +49,7 @@ In the DMN decision model for this scenario, the *Credit Score Rating* decision 
 image::dmn/dmn-manage-data-types-blank.png[]
 --
 . Continuing with this example, double-click any column header to return to the *Manage Custom Data Types* window, click *Add*, and create a *Loan_Qualification* data type as a `Structure` with no constraints.
-. Next to the *Loan_Qualification* data type, select the settings icon (three vertical dots) and select *Insert nested field* to insert sub-fields within this parent data type.
+. Next to the *Loan_Qualification* data type, select the three vertical dots and select *Insert nested field* to insert sub-fields within this parent data type.
 +
 --
 image::dmn/dmn-manage-data-types-structured.png[]

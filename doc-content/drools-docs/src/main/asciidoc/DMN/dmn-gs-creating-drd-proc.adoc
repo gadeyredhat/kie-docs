@@ -3,6 +3,9 @@
 
 Use the DMN designer in {CENTRAL} to design the DMN decision requirements diagrams (DRDs) and define decision logic for the traffic violation project.
 
+.DRD for the Traffic Violation example
+image::dmn/dmn-traffic-violations-drd.png[]
+
 .Prerequisite
 * You have created the traffic-violations project in {CENTRAL}.
 
@@ -16,9 +19,5 @@ Use the DMN designer in {CENTRAL} to design the DMN decision requirements diagra
 . Drag a decision node to the canvas. Double-click and rename it as `Fine`.
 . Click the *Violation* input node and select the `Create DMN Information Requirement` option to connect to the `Fine` decision node.
 . Drag another decision node to the canvas and double-click and rename it as `Should the driver be suspended?`.
-. Click the *Driver* input node and select the  `Create DMN Information Requirement` option to connect to the `Fine` decision node.
+. Click the *Driver* input node and select the  `Create DMN Information Requirement` option to connect to the `Should the driver be suspended?` decision node.
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.
-
-+
-.DRD for the Traffic Violation example
-image::dmn/dmn-traffic-violations-drd.png[]

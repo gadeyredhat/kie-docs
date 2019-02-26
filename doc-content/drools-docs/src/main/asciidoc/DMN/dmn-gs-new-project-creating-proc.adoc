@@ -23,7 +23,7 @@ image::getting-started/spaces-teams.png[]
 . Click *Add*.
 +
 
-.Add Project window with expanded Advanced Options 
+.Add Project window with expanded Advanced Options
 image::dmn/dmn-new-project-gs.png[]
 
 The *Assets* view of the project opens.
