@@ -1,7 +1,7 @@
 [id='dmn-gs-creating-custom-datatypes-proc']
 = Creating the traffic violations DMN custom data types
 
-Use the DMN designer's *Data Types* tab in {CENTRAL} to define the custom data types for the *Traffic Violations* projects.
+DMN data types determine the structure of the data that you use within a table, column, or field in a DMN boxed expression for defining decision logic. You can use default DMN data types (such as string, number, or boolean) or you can create custom data types to specify additional fields and constraints that you want to implement for the boxed expression values. Use the DMN designer's *Data Types* tab in {CENTRAL} to define the custom data types for the *Traffic Violations* projects.
 
 .The custom data types tab
 image::dmn/dmn-custom-datatypes-tab.png[]
@@ -11,14 +11,14 @@ Alternately, you can also access the *Data Types* tab from the *Diagram properti
 .Diagram properties tab
 image::dmn/dmn-diagram-properties-tab.png[]
 
-The following tables show the `Violation`, `Driver`, and the `Fine` custom data types that you will create for this project.
+The following tables list the `Violation`, `Driver`, and `Fine` custom data types that you will create for this project.
 
-.Driver custom data type
+.Driver custom data types
 [cols="1,1", options="header"]
 |===
-|ID |Type
+|Name |Type
 
-|tDriver |structure
+|tDriver |Structure
 |Name |string
 |Age |number
 |State |string
@@ -26,12 +26,12 @@ The following tables show the `Violation`, `Driver`, and the `Fine` custom data 
 |Points |number
 |===
 
-.Violation custom data type
+.Violation custom data types
 [cols="1,1", options="header"]
 |===
-|ID |Type
+|Name |Type
 
-|tViolation |structure
+|tViolation |Structure
 |Code |string
 |Date |date
 |Type |string
@@ -39,65 +39,59 @@ The following tables show the `Violation`, `Driver`, and the `Fine` custom data 
 |Actual Speed |number
 |===
 
-.Fine custom data type
+.Fine custom data types
 [cols="1,1", options="header"]
 |===
-|ID |Type
+|Name |Type
 
-|tFine |structure
+|tFine |Structure
 |Amount |number
 |Points |number
 |===
 
 .Prerequisite
-* You have created the traffic-violations DMN decision requirements diagrams (DRDs) in {CENTRAL}.
+* You have created the traffic-violation DMN decision requirements diagrams (DRDs) in {CENTRAL}.
 
 .Procedure
 . From the *Data Types* tab, click *Add*.
-. First, create the *tDriver* custom data type. Enter `tDriver` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
+. First, create the *tDriver* custom data type. Enter `tDriver` as the *Name* and select `Structure` as the *Type*. Click *Save* to save the data type.
 +
 .The tDriver custom data type
 image::dmn/dmn-tDriver-custom-datatype.png[]
-. Next to the *tDriver* data type, click the three vertical dots and select *Insert nested field*.
-.. Enter `Name` in the *Name* field and select `string` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Name* field and select *Insert field below*.
-.. Enter `Age` in the *Name* field and select `number` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Age* field and select *Insert field below*.
-.. Enter `State` in the *Name* field and select `string` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *State* field and select *Insert field below*.
-.. Enter `City` in the *Name* field and select `string` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *City* field and select *Insert field below*.
-.. Enter `Points` in the *Name* field and select `number` as the *Type*. Click *Save*.
+. Next to the *tDriver* data type, click the three vertical dots, select *Insert nested field*, and add the following nested data types. Click *Save* for each one you add.
++
+* *Name* (string)
+* *Age* (number)
+* *State* (string)
+* *City* (string)
+* *Points* (number)
+
 . Next, create the *tViolation* data type. From the *Data Types* tab, click *Add*.
 +
 .The tViolation custom data type
 image::dmn/dmn-tViolation-custom-datatype.png[]
-. Enter `tViolation` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
-. Next to the *tViolation* data type, click the three vertical dots and select *Insert nested field*.
-.. Enter `Code` in the *Name* field and select `string` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Code* field and select *Insert field below*.
-.. Enter `Date` in the *Name* field and select `date` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Date* field and select *Insert field below*.
-.. Enter `Type` in the *Name* field and select `string` as the *Type*.
-.. Click *Constraints* to open *Data Type Constraints* dialog box and enter the following values:
-... Select `Enumeration` as the *Select constraint type*.
-... Enter `"speed"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
-... Click *Add* to add a new constraint.
-... Enter `"parking"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
-... Click *Add* to add another constraint.
-... Enter `"Driving under influence?"` and click image:dmn/dmn-datatype-constraints-tickmark.png[].
-... Click *OK*.
-.. Click the settings icon next to the *Type* field and select *Insert field below*.
-.. Enter `Speed Limit` in the *Name* field and select `integer` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Speed Limit* field and select *Insert field below*.
-.. Enter `Actual Speed` in the *Name* field and select `integer` as the *Type*. Click *Save*.
+. Enter `tViolation` as the *Name* and select `Structure` as the *Type*. Click *Save* to save the data type.
+. Next to the *tViolation* data type, click the three vertical dots, select *Insert nested field*, and add the following nested data types. Click *Save* for each data type that you add.
++
+* *Code* (string)
+* *Date* (date)
+* *Type* (string)
+* *Speed Limit* (number)
+* *Actual Speed* (number)
+
+. For the nested `Type` data type that you created, click *Edit* -> *Constraints* -> *Enumeration* and add the following constraints. Click image:dmn/dmn-datatype-constraints-tickmark.png[] to save each enumeration constraint that you add.
++
+* `speed`
+* `parking`
+* `Driving under the influence?`
+
 . Finally, create the *tFine* data type. From the *Data Types* tab, click *Add*.
 +
 .The tFine custom data type
 image::dmn/dmn-tFine-custom-datatype.png[]
-. Enter `tFine` as *Name* and select `structure` as the *Type*. Click *Save* to save the data type.
-. Next to the *tFine* data type, click the three vertical dots and select *Insert nested field*.
-.. Enter `Amount` in the *Name* field and select `number` as the *Type*. Click *Save*.
-.. Click the settings icon next to the *Amount* field and select *Insert field below*.
-.. Enter `Points` in the *Name* field and select `number` as the *Type*. Click *Save*.
+. Enter `tFine` as the *Name* and select `Structure` as the *Type*. Click *Save* to save the data type.
+. Next to the *tFine* data type, click the three vertical dots, select *Insert nested field*, and add the following nested data types. Click *Save* for each data type that you add.
+* *Amount* (number)
+* *Points* (number)
+
 . Once all the three custom data types are created, click *Save* to open the *Confirm Save* dialog box and click *Save* again.
