@@ -1,13 +1,13 @@
 [id='dmn-gs-testing-test-scenario-proc']
 = Testing the traffic violations using test scenarios
 
-You will use the Test Scenarios designer in {CENTRAL} to test the DMN decision requirements diagrams (DRDs) and define decision logic for the traffic violation project.
+Use the test scenarios designer in {CENTRAL} to test the DMN decision requirements diagrams (DRDs) and define decision logic for the traffic violations project.
 
-.Test scenario for the traffic violation example
+.Test scenario for the traffic violations example
 image::dmn/dmn-gs-traffic-violation-test-scenarios.png[]
 
 .Prerequisite
-* You have successfully build the traffic-violation project in {CENTRAL}.
+* You have successfully build the *traffic_violations* project in {CENTRAL}.
 
 .Procedure
 . On the *traffic-violation* project's home screen, click *Add Asset* to open the *Add Asset* screen.
@@ -75,7 +75,7 @@ Right-click the fourth row and select *Insert row below* to add another row.
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.
 . Click the play button to check whether the test scenarios pass or fail.
 +
-.Test scenario execution result for the traffic violation example
+.Test scenario execution result for the traffic violations example
 image::dmn/dmn-gs-test-scenarios-execution-results.png[]
 +
 In case of failure, correct the errors and run the test scenarios again.

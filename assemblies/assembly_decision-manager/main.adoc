@@ -10,7 +10,7 @@ include::_artifacts/document-attributes.adoc[]
 include::_artifacts/author-group.adoc[]
 
 // Purpose statement for the assembly
-As a business rules developer, you can use {CENTRAL} in {PRODUCT} to design a variety of decision services. {PRODUCT} provides example projects with example decisions directly in {CENTRAL} as a reference. This document describes how to create and test a new project in {CENTRAL} for an example traffic violation decision service based on a Decision Model and Notation (DMN) model.
+As a business rules developer, you can use {CENTRAL} in {PRODUCT} to design a variety of decision services. {PRODUCT} provides example projects with example decisions directly in {CENTRAL} as a reference. This document describes how to create and test a new project in {CENTRAL} for an example traffic violations decision service based on a Decision Model and Notation (DMN) model.
 
 For more information about the DMN components and implementation in {PRODUCT}, see {URL_DMN_MODELS}[_{DMN_MODELS}_].
 
