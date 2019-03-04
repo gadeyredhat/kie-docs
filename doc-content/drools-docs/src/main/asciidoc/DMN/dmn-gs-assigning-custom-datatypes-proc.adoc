@@ -4,7 +4,7 @@
 After you create the DMN custom data types, assign them to the appropriate *DMN Input Data* and *DMN Decision* nodes in the traffic violations DRD.
 
 .Prerequisite
-* You have created the Traffic Violation DMN custom data types in {CENTRAL}.
+* You have created the traffic violations DMN custom data types in {CENTRAL}.
 
 .Procedure
 . Click the *Model* tab on the DMN designer and click *Diagram properties* in the top-right corner of the DMN designer to expose the DRD properties.

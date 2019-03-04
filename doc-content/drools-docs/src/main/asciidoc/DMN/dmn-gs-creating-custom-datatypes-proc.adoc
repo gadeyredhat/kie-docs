@@ -50,7 +50,7 @@ The following tables list the `Violation`, `Driver`, and `Fine` custom data type
 |===
 
 .Prerequisite
-* You have created the Traffic Violation DMN decision requirements diagram (DRDs) in {CENTRAL}.
+* You have created the traffic violations DMN decision requirements diagram (DRDs) in {CENTRAL}.
 
 .Procedure
 . From the *Data Types* tab, click *Add*.

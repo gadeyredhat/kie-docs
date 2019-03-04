@@ -7,7 +7,7 @@ A decision requirements diagram (DRD) is a visual representation of your DMN mod
 image::dmn/dmn-traffic-violations-drd.png[]
 
 .Prerequisite
-* You have created the traffic_violations project in {CENTRAL}.
+* You have created the traffic violations project in {CENTRAL}.
 
 .Procedure
 . On the *traffic-violations* project's home screen, click *Add Asset* to open the *Add Asset* screen.

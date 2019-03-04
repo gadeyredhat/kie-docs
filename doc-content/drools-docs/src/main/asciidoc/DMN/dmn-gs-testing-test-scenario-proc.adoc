@@ -7,7 +7,7 @@ Use the test scenarios designer in {CENTRAL} to test the DMN decision requiremen
 image::dmn/dmn-gs-traffic-violation-test-scenarios.png[]
 
 .Prerequisite
-* You have successfully build the traffic_violations project in {CENTRAL}.
+* You have successfully build the traffic violations project in {CENTRAL}.
 
 .Procedure
 . On the *traffic-violation* project's home screen, click *Add Asset* to open the *Add Asset* screen.
