@@ -13,7 +13,7 @@ include::_artifacts/author-group.adoc[]
 As a systems administrator, you can install, configure, and upgrade {PRODUCT} for production environments, quickly and easily troubleshoot system failures, and ensure that systems are running optimally.
 
 .Prerequisites
-* Installed {EAP_LONG} 7.1.0. See  https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html-single/installation_guide/[_Red Hat JBoss EAP 7.1.0 Installation Guide_].
+* Installed {EAP_LONG} 7.1.0. See  https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.2/html-single/installation_guide/[_Red Hat JBoss EAP 7.2.0 Installation Guide_].
 * Installed {PRODUCT}. For more information, see {URL_PLANNING_INSTALL}[_{PLANNING_INSTALL}_].
 * {PRODUCT} is running and you can log in to {CENTRAL} with the `admin` role. For more information, see {URL_PLANNING_INSTALL}[_{PLANNING_INSTALL}_].
 
@@ -49,7 +49,7 @@ For more information about running {PRODUCT} in a {EAP_LONG} clustered environme
 include::{enterprise-dir}/admin-and-config/kie-server-configure-central-proc.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/admin-and-config/kie-server-configure-server-managed-by-workbench-proc.adoc[leveloffset=+1]
-include::{enterprise-dir}/admin-and-config/kie-server-smart-router-enable-tsl-support-proc.adoc[leveloffset=+2]
+include::{enterprise-dir}/admin-and-config/kie-server-smart-router-enable-tls-support-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/admin-and-config/kie-server-managed-kie-server-con.adoc[leveloffset=+1]
 
@@ -57,12 +57,14 @@ include::{enterprise-dir}/admin-and-config/kie-server-unmanaged-server-config-pr
 
 ifdef::PAM[]
 include::{enterprise-dir}/admin-and-config/kie-server-deactivate-kie-containers-proc.adoc[leveloffset=+1]
+endif::PAM[]
 
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/deployment-descriptor-configuration-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-manage-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/deployment-descriptors-restricting-runtime-access-proc.adoc[leveloffset=+2]
 
+ifdef::PAM[]
 include::{enterprise-dir}/admin-and-config/kie-server-accessing-runtime-data-proc.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/admin-and-config/execution-error-management-con.adoc[leveloffset=+1]

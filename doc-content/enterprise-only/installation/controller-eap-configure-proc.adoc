@@ -1,7 +1,7 @@
 [id='controller-eap-configure-proc']
 = Configuring {KIE_SERVER} and the {HEADLESS_CONTROLLER}
 
-If {KIE_SERVER} will be managed by the {HEADLESS_CONTROLLER}, you must edit the `standalone-full.xml` file in both the {KIE_SERVER} and {HEADLESS_CONTROLLER} installations, as described in this section.
+If {KIE_SERVER} will be managed by the {HEADLESS_CONTROLLER}, you must edit the `standalone-full.xml` file in both the {KIE_SERVER} and {HEADLESS_CONTROLLER} installations, as described in this section. When you install {KIE_SERVER} and the {HEADLESS_CONTROLLER} separately, the {HEADLESS_CONTROLLER} uses only the `standalone.xml` file.
 
 .Prerequisites
 ifeval::["{context}" == "install-on-eap"]
