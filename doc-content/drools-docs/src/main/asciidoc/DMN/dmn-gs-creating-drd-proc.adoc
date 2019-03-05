@@ -20,4 +20,5 @@ image::dmn/dmn-traffic-violations-drd.png[]
 . Click the *Violation* input node and select the `Create DMN Information Requirement` option to connect to the `Fine` decision node.
 . Drag another decision node to the canvas and double-click and rename it as `Should the driver be suspended?`.
 . Click the *Driver* input node and select the  `Create DMN Information Requirement` option to connect to the `Should the driver be suspended?` decision node.
+. Click the *Fine* decision node and select the  `Create DMN Information Requirement` option to connect to the `Should the driver be suspended?` decision node.
 . Click *Save* to open the *Confirm Save* dialog box and click *Save* again.

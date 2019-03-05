@@ -81,9 +81,9 @@ image::dmn/dmn-tViolation-custom-datatype.png[]
 
 . For the nested `Type` data type that you created, click *Edit* -> *Constraints* -> *Enumeration* and add the following constraints. Click the check icon image:dmn/dmn-datatype-constraints-tickmark.png[] to save each enumeration constraint that you add.
 +
-* `speed`
-* `parking`
-* `Driving under the influence?`
+* `"speed"`
+* `"parking"`
+* `"Driving under the influence?""`
 
 . Finally, create the *tFine* data type. From the *Data Types* tab, click *Add*.
 +
