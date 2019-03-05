@@ -79,10 +79,17 @@ The following distribution types are supported in {PRODUCT} update tool:
 
 * `{PRODUCT_INIT}-{URL_COMPONENT_CENTRAL}-eap7-deployable`: Updates {CENTRAL} (`{URL_COMPONENT_CENTRAL}.war`)
 * `{PRODUCT_INIT}-kie-server-ee8`: Updates {KIE_SERVER} (`kie-server.war`)
++
+ifeval::["{context}" == "execution-server"]
+[NOTE]
+====
+The update tool will update {EAP} EE7 to {EAP} EE8.
+====
+endif::[]
 ifdef::DM[]
 * `{PRODUCT_INIT}-kie-server-jws`: Updates {KIE_SERVER} on {JWS} (`kie-server.war`)
 endif::DM[]
-* `{PRODUCT_INIT}-controller-ee8`: Updates the {HEADLESS_CONTROLLER} (`controller.war`)
+* `{PRODUCT_INIT}-controller-ee7`: Updates the {HEADLESS_CONTROLLER} (`controller.war`)
 ifdef::DM[]
 * `{PRODUCT_INIT}-controller-jws`: Updates the {HEADLESS_CONTROLLER} on {JWS} (`controller.war`)
 endif::DM[]
