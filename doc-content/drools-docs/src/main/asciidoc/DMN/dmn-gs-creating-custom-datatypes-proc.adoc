@@ -83,7 +83,7 @@ image::dmn/dmn-tViolation-custom-datatype.png[]
 +
 * `"speed"`
 * `"parking"`
-* `"Driving under the influence?""`
+* `"Driving under the influence?"`
 
 . Finally, create the *tFine* data type. From the *Data Types* tab, click *Add*.
 +
