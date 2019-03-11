@@ -1,0 +1,4 @@
+[id='test-scenarios-running-locally-proc']
+= Running a test scenario locally in {CENTRAL}
+
+In {PRODUCT}, there are two test scenarios editors. One is the *Test Scenario* editor and the other is *Test Scenario (Legacy)* editor. The *Test Scenario* editor is the default editor and is supported for production use. You can use either of them to test your business rules & data. This chapters covers how to use the *Test Scenario (Legacy)* editor to create and run test scenarios. The *Test Scenario (Legacy)* editor runs test scenario based on DRL files and Guided Decision Tables.
