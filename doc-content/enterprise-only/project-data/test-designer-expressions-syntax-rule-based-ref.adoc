@@ -1,7 +1,7 @@
-[id='preview-editor-expressions-syntax-ref']
-= Expressions syntax
+[id='test-designer-expressions-syntax-rule-based-ref']
+= Expression syntax in rule-based scenarios
 
-The following test scenario definition expressions are supported by *Test Scenario (Preview)* editor:
+The following rule-based test scenario definition expressions are supported by *Test Scenario* designer:
 
 .Description of expressions syntax
 [width="",cols="3,6"]
@@ -27,7 +27,7 @@ The following test scenario definition expressions are supported by *Test Scenar
 
 [NOTE]
 ====
-An empty cell is equal to null. To define an empty string, use `=`.
+An empty cell is skipped from evaluation. To define an empty string, use `=`,`[]`, or `;`. To define a null value, use `null`.
 ====
 
 .Example expressions
@@ -36,31 +36,31 @@ An empty cell is equal to null. To define an empty string, use `=`.
 |Expression | Description
 
 |-1
-|The expected value is equal to -1.
+|The actual value is equal to -1.
 
 |< 0
-|The expected value is less than 0.
+|The actual value is less than 0.
 
 |! > 0
-|The expected value is not greater than 0.
+|The actual value is not greater than 0.
 
 |[-1, 0, 1]
-|The expected value is equal to either -1 or 0 or 1.
+|The actual value is equal to either -1 or 0 or 1.
 
 |<> [1, -1]
-|The expected value is neither equal to 1 nor -1.
+|The actual value is neither equal to 1 nor -1.
 
 |! 100; 0
-|The expected value is not equal to 100 but is equal to 0.
+|The actual value is not equal to 100 but is equal to 0.
 
 |!= < 0; <> > 1
-|The expected value is neither less than 0 nor greater than 1.
+|The actual value is neither less than 0 nor greater than 1.
 
 |<> < = 0; >= 1
-|The expected value is neither less than 0 nor equal to 0 but is greater than or equal to 1.
+|The actual value is neither less than 0 nor equal to 0 but is greater than or equal to 1.
 |===
 
 [NOTE]
 ====
-You can refer to the supported commands and syntax in the *Scenario Cheatsheet* tab on the *Test Tools* panel.
+You can refer to the supported commands and syntax in the *Scenario Cheatsheet* tab on the *Test Tools* panel on the right of the *Test Scenario* designer.
 ====

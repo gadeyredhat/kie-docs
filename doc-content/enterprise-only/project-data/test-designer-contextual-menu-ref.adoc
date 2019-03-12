@@ -1,7 +1,7 @@
-[id='preview-editor-contextual-menu-ref']
+[id='test-designer-contextual-menu-ref']
 = Contextual menu options
 
-The *Test Scenario (Preview)* editor provides contextual menu options, which enables you to perform basic operations on the table such as adding, deleting, and, duplicating rows and columns. To use the contextual menus, you need to right-click a table element. Menu options differ based on the table element you select.
+The *Test Scenario* editor provides contextual menu options, which enables you to perform basic operations on the table such as adding, deleting, and, duplicating rows and columns. To use the contextual menus, you need to right-click a table element. Menu options differ based on the table element you select.
 
 .Contextual menu options
 [width="",cols="2,3,5"]
@@ -10,29 +10,23 @@ The *Test Scenario (Preview)* editor provides contextual menu options, which ena
 
 .3+|Header
 |# & Scenario description
-|Insert top row, Insert bottom row
+|Insert row below
 
 |GIVEN & EXPECTED
-|Insert leftmost column, Insert rightmost column, Insert top row, Insert bottom row
+|Insert leftmost column, Insert rightmost column, Insert row below
 
 |INSTANCE 1, INSTANCE 2 & PROPERTY 1, PROPERTY 2
-|Insert column left, Insert column right, Delete column, Insert top row, Insert bottom row
+|Insert column left, Insert column right, Delete column, Insert row below
 
 |Rows
 |
-|Insert column left, Insert column right, Delete column, Insert top row, Insert bottom row, Insert row above, Insert row below, Duplicate row, Delete row
+|Insert column left, Insert column right, Delete column, Insert row above, Insert row below, Duplicate row, Delete row
 |===
 
 .Description of table interactions
 [width="",cols="4,12"]
 |===
 |Table interaction .^| Description
-
-|Insert top row
-|Inserts a new row at the top of the table.
-
-|Insert bottom row
-|Inserts a new row at the bottom of the table.
 
 |Insert leftmost column
 |Inserts a new leftmost column (in either the GIVEN or EXPECTED section of the table based on user selection).
@@ -53,7 +47,7 @@ The *Test Scenario (Preview)* editor provides contextual menu options, which ena
 |Inserts a new row above the selected row.
 
 |Insert row below
-|Inserts a new row below the selected row.
+|Inserts a new row below the selected row. If invoked from a header cell, inserts a new row with index 1.
 
 |Duplicate row
 |Duplicates the selected row.
