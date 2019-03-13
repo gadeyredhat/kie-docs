@@ -10,7 +10,7 @@ include::_artifacts/document-attributes.adoc[]
 include::_artifacts/author-group.adoc[]
 
 // Purpose statement for the assembly
-As a business analyst or business rules developer, you can use test scenarios in {CENTRAL} to test a decision service before a project is deployed. Testing a decision service ensures that rule assets in the project function properly and as expected. You can test a decision service at any time during project development.
+As a business analyst or business rules developer, you can use test scenarios in {CENTRAL} to test a decision service before a project is deployed. You can test both DMN-based decision service or rules-based decision service and ensure that all assets in the project are functioning properly and as expected. Also, you can test a decision service at any time during project development.
 
 .Prerequisites
 * The team and project for the decision service have been created in {CENTRAL}. For details, see {URL_GETTING_STARTED_DECISION_SERVICE}[_{GETTING_STARTED_DECISION_SERVICE}_].
@@ -24,38 +24,38 @@ include::{enterprise-dir}/project-data/test-scenarios-con.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/project-data/data-objects-con.adoc[leveloffset=+1]
 
-//Test Scenarios (Preview) editor files
-include::{enterprise-dir}/project-data/test-scenario-preview-editor-con.adoc[leveloffset=+1]
-include::{enterprise-dir}/project-data/preview-editor-con.adoc[leveloffset=+2]
-include::{enterprise-dir}/project-data/preview-editor-enable-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-layout-con.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-data-objects-import-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-test-scenario-import-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-basic-operations-con.adoc[leveloffset=+2]
-//include::{enterprise-dir}/project-data/preview-editor-data-objects-create-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-save-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-delete-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-rename-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-copy-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-download-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-latest-version-test-proc.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/preview-editor-view-hide-alerts-con.adoc[leveloffset=+3]
+//Test Scenarios designer files
+include::{enterprise-dir}/project-data/test-scenario-designers-intro-con.adoc[leveloffset=+1]
+include::{enterprise-dir}/project-data/test-designer-con.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-layout-con.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-data-objects-import-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-test-scenario-import-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-basic-operations-con.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-save-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-delete-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-rename-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-copy-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-download-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-latest-version-test-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-view-hide-alerts-con.adoc[leveloffset=+3]
 include::{enterprise-dir}/project-data/test-designer-contextual-menu-ref.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-list-map-add-remove-item-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/project-data/test-designer-create-test-scenario-template-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/project-data/test-designer-alias-con.adoc[leveloffset=+3]
 include::{enterprise-dir}/project-data/test-designer-create-test-template-rule-based-proc.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-test-template-dmn-based-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/project-data/test-designer-create-test-template-dmn-based-proc.adoc[leveloffset=+3]
 include::{enterprise-dir}/project-data/test-designer-test-scenario-definition-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/project-data/test-designer-expressions-syntax-intro-ref.adoc[leveloffset=+3]
-include::{enterprise-dir}/project-data/test-designer-expressions-syntax-rule-based-ref.adoc[leveloffset=+4]
-include::{enterprise-dir}/project-data/test-designer-expressions-syntax-dmn-based-ref.adoc[leveloffset=+4]
-include::{enterprise-dir}/project-data/test-scenarios-designer-run-test-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/project-data/test-scenarios-designer-create-mortgages-example-proc.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-expressions-syntax-intro-ref.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-expressions-syntax-rule-based-ref.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-expressions-syntax-dmn-based-ref.adoc[leveloffset=+3]
+include::{enterprise-dir}/project-data/test-designer-run-test-proc.adoc[leveloffset=+2]
+include::{enterprise-dir}/project-data/test-designer-create-mortgages-example-proc.adoc[leveloffset=+2]
 
 include::{drools-dir}/AuthoringAssets/test-scenarios-running-locally-proc.adoc[leveloffset=+1]
 
-// Test Scenarios (Legacy) editor files
-include::{drools-dir}/AuthoringAssets/test-scenario-editor-con.adoc[leveloffset=+1]
+// Test Scenarios (Legacy) designer files
+include::{drools-dir}/AuthoringAssets/test-scenario-designer-con.adoc[leveloffset=+1]
 include::{drools-dir}/AuthoringAssets/data-objects-create-proc.adoc[leveloffset=+2]
 include::{drools-dir}/AuthoringAssets/test-scenarios-create-proc.adoc[leveloffset=+2]
 include::{drools-dir}/AuthoringAssets/test-scenarios-GIVEN-proc.adoc[leveloffset=+3]
