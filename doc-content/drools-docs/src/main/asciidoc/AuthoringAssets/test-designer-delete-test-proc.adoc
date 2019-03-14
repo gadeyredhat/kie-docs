@@ -1,7 +1,7 @@
 [id='test-designer-delete-test-proc']
 = Deleting a test scenario
 
-You can delete existing test scenarios which were created using the *Test Scenario* designer.
+You can delete existing test scenarios that were created using the *Test Scenario* designer.
 
 .Procedure
 . From the *Test Scenario* designer toolbar on the upper-right, click *Delete*.
