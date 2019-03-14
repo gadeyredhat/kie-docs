@@ -1,7 +1,7 @@
 [id='test-designer-test-scenario-definition-proc']
 = Defining a test scenario
 
-After creating a test scenario template you have to define the test scenario next. The rows of the test scenario table define the individual test scenarios. A test scenario has a unique index number, description, set of input values (the *Given* values), and a set of output values (the *Expected* values).
+After creating a test scenario template you have to define the test scenario next. The rows of the test scenario table define the individual test scenarios. A test scenario has a unique index number, description, set of input values (the *Given* values), and a set of output values (the *Expect* values).
 
 .Prerequisite
 Ensure that the test scenario template exists for the selected test scenario.

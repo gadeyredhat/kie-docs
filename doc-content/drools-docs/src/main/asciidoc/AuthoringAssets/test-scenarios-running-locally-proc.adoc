@@ -1,5 +1,5 @@
 [id='test-scenarios-running-locally-proc']
-= Running a test scenario locally in {CENTRAL}
+= Running a test scenario locally
 
 In {PRODUCT}, you can run tests in two ways. One way is click the *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon at the top of the Test Scenarios designer. The other way is to run the tests locally using the command line.
 

@@ -19,8 +19,8 @@ Create a test scenario template for DMN-based scenarios by following the procedu
 .. Click a property cell.
 .. Select the data object field from the *Test Editor* tab.
 .. Click *Add*.
-. To map the *EXPECTED* column header to a data object:
-.. Click an instance header in the *EXPECTED* section.
+. To map the *EXPECT* column header to a data object:
+.. Click an instance header in the *EXPECT* section.
 .. Select the data object from the *Test Editor* tab.
 .. Click *Add*.
 . To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
@@ -31,4 +31,4 @@ Create a test scenario template for DMN-based scenarios by following the procedu
 
 Use the contextual menu to add or remove columns and rows as needed.
 
-After you have created and mapped both the *GIVEN* and *EXPECTED* columns to a data object & its properties, you have to define the test scenario which comes next.
+After you have created and mapped both the *GIVEN* and *EXPECT* columns to a data object & its properties, you have to define the test scenario which comes next.

@@ -6,7 +6,7 @@ The designer introduces a tabular layout which helps you in defining a scenario 
 The test scenario template or header has the following two parts:
 
 * *GIVEN* data objects and their fields - represents the input information
-* *EXPECTED* data objects and their fields - represents the objects and their fields whose exact values are checked based on the given information and which also constitutes the expected result.
+* *EXPECT* data objects and their fields - represents the objects and their fields whose exact values are checked based on the given information and which also constitutes the expected result.
 
 The test scenarios definitions represent the separate test cases of a template.
 
