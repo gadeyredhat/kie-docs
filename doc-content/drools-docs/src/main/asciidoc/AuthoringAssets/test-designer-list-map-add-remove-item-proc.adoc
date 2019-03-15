@@ -10,4 +10,4 @@
 . Enter the required value and click the check icon image:dmn/dmn-datatype-constraints-tickmark.png[] to save each collection item that you add.
 . Click *Save*.
 +
-To delete an item from the collection click *Remove* in the collection popup editor.
+To delete an item from the collection, click the bin icon in the collection popup editor. Click *Remove* to delete the collection itself.
